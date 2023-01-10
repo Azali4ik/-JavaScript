@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const number = +prompt('Введите число:');
+    const thousands = Math.trunc(number%10000/1000);
+    const hundreds = Math.trunc(number%1000/100);
+    const dozens = Math.trunc(number%100/10);
+    const pieces = Math.trunc(number%10);
+  alert(`В числе ${number} 
+  количесвто тысячных: ${thousands};
+  количесвто сотен: ${hundreds};
+  десятков: ${dozens}; 
+  единиц: ${pieces}.`);
+    </script>
+</body>
+</html>

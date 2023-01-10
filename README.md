@@ -1,2 +1,1 @@
-# -JavaScript
-# -JavaScript
+можно без двоек 
