@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // первый способ (простой)
+{ 
+    let Anumber = +prompt("Введите сумму заработной платы что бы узнать число вычита налогов :(");
+    let square = (x) => x*0.13;
+    alert(`Размер заработной платы за вычетом налогов равен значение: ${square(Anumber)}₽ `)
+}
+
+// второй способ (тут я не сильно уверен что оно похоже на функцию, а так же мы могли заметить что я часто 
+// использую alert а не console.log, так просто удобно выводить на экаран результат)
+{ 
+    let number = (prompt('Введите число ЗП'));
+if (isNaN(number)) {
+    alert("NDFL number");
+}
+let x = 0.13;
+let salary = (number, x) => {
+    return number * x;
+}
+alert(`Размер заработной платы за вычетом налогов равен ${salary(number, x)}₽`);
+}
+
+
+
+
+
+</script>
+
+</body>
+</html>
