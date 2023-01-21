@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function randomIntFromInterval(min, max){
+        return Math.floor(Math.random() * (max - min + 1 + min))
+        }
+        
+     
+     
+        let sum = 0;
+        const num = [];
+
+        for (let i = 1; i <6; i++) {
+            num.push(randomIntFromInterval(1,10))
+
+        }
+
+        for (let i = 0; i < num.length; i++) {
+            sum += num[i];
+            
+        }
+
+        let min = num[0];
+        for (let i = 0; i < num.length; i++) {  
+        const element = num[i];
+        if (min > element) {
+        min = element;
+       }
+       }
+
+       const elnum = 3;
+       arrNumber (num, elnum);
+        function arrNumber(num, elnum) {
+       for (let i = 0; i < num.length; i++) {
+       if (num[i] === elnum) {
+           return alert(`
+       массив ${num}; 
+       сумма массива ${sum};
+       минимальное значение в массиве ${min};
+       В данном массиве есть число ${elnum};`);
+       }
+       }
+       return alert(`
+       массив ${num}; 
+       сумма массива ${sum};
+       минимальное значение в массиве ${min};
+       В данном массиве нет числа ${elnum}`);
+       }
+
+
+
+
+
+
+        
+
+
+  
+
+
+
+    
+    
+
+ 
+        
+        
+   
+   
+        
+
+    </script>
+    
+</body>
+</html>
