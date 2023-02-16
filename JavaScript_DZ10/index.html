@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .api {
+            border: 1px solid black;
+            padding: 16px;
+            max-width: 250px;
+            text-align: justify;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .imageApi {
+            height: 150px;
+            display: block;
+            margin: 0 auto;
+            max-width: 200px;
+        }
+
+        .table {
+            text-align: left;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="content">
+
+    </div>
+    <script src="data.js"></script>
+    <script>
+        const contentEl = document.querySelector('.content');
+        const data = JSON.parse(dataInfo);
+
+        data.forEach(element => {
+            const apiEl = document.createElement('div');
+            apiEl.classList.add('api');
+            contentEl.appendChild(apiEl);
+
+            const imageApi = document.createElement('img');
+            imageApi.classList.add('imageApi');
+            imageApi.src = element.url;
+            apiEl.appendChild(imageApi);
+
+            const tableContentEl = document.createElement('h2');
+            tableContentEl.textContent = element.name;
+            tableContentEl.classList.add('table');
+            apiEl.appendChild(tableContentEl);
+
+            const discriptionApi = document.createElement('div');
+            discriptionApi.textContent = element.discription;
+            apiEl.appendChild(discriptionApi);
+        });
+        //этот урок я понял но не понял почему у меня не работаеот и почему если я уберу один элимент json то он вообще не будет рабоать 
+        //тут я к сожелению немножко списал
+    </script>
+
+</body>
+
+</html>
+
